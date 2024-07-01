@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+}
+
+#logo {
+    position: absolute;
+    width: 177.2px;
+    height: 177.2;
+    left: 300px;
+    z-index: 1;
+}
+
+.nav {
+    background-color: #B50014;
+    width: 1920px;
+    height: 93px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbarlinks {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* Poravnanje sadržaja uz desnu stranu */
+    margin-left: auto;
+    /* Prilepljivanje uz desnu stranu */
+    left: 518px;
+    position: absolute;
+}
+
+.navbarlinks li:last-child a{
+    display: flex;
+    align-items: center;
+    padding-right: 10px; /* Dodatni razmak desno od teksta */
+}
+
+.navbarlinks li:last-child a img {
+    width: 24px; /* Veličina slike */
+    height: 28px; /* Održavanje omjera visine */
+    margin-right: 5px; /* Razmak između slike i teksta */
+}
+
+#pdf {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 90px;
+    height: 28px;
+    top: 35px;
+    left: 1532px;
+}
+
+.navbarlinks li {
+    margin-left: 10px;
+    /* Opciono: dodatni razmak između stavki */
+}
+
+.navbarlinks li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18.75px;
+}
+
+#crnaLinija {
+    width: 1920px;
+    height: 30px;
+    background-color: #252525;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.41px;
+}
+
+#crnaLinija>img {
+    width: 15.05px;
+    height: 15px;
+    position: absolute;
+    left: 1166px;
+    top: 101px;
+}
+
+#crnaLinija>p {
+    position: absolute;
+    left: 1188px;
+    top: 101px;
+    margin: 0;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+}
+.overlay {
+    position: absolute;
+    top: 287px;
+    left: 0;
+    width: 629px;
+    height: 348px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Poluprozirna pozadina */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box; /* Uključivanje paddinga u širinu i visinu */
+}
