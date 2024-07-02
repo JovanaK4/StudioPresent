@@ -17,7 +17,7 @@ header {
 
 .nav {
     background-color: #B50014;
-    width: 1900px;
+    width: 1899px;
     height: 93px;
     margin: 0;
     display: flex;
@@ -82,7 +82,7 @@ header {
 }
 
 #crnaLinija {
-    width: 1900px;
+    width: 1899px;
     height: 30px;
     background-color: #252525;
     display: flex;
@@ -134,7 +134,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end; 
+    align-items: flex-end;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 20px;
@@ -142,41 +142,48 @@ header {
     font-family: "Roboto", sans-serif;
 }
 
-.overlay > div {
+.overlay>div {
     position: relative;
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.overlay > div >h1 p{
+
+.overlay>div>h1 p {
     position: absolute;
     align-self: flex-end;
 }
 
-#section1{
+#section1 {
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    width: 100%; /* Adjust as needed */
+    justify-content: center;
+    /* Centers horizontally */
+    align-items: center;
+    /* Centers vertically */
+    width: 100%;
+    /* Adjust as needed */
     height: 700px;
-    background-color:#252525;
-    margin-top:-10px; /* Adjust negative margin to remove gap */
+    background-color: #252525;
+    margin-top: -10px;
+    /* Adjust negative margin to remove gap */
 }
-#omotac1{
-    width: 60%; 
+
+#omotac1 {
+    width: 60%;
     height: 70%;
     display: flex;
 }
 
-.Omotac1-children{
+.Omotac1-children {
     flex: 1;
-    padding: 10px; 
+    padding: 10px;
     box-sizing: border-box;
 }
-.child1{
+
+.child1 {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
     padding-right: 10%;
@@ -185,39 +192,43 @@ header {
     color: #FFFFFF;
 }
 
-.child2{
+.child2 {
     padding: 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
 }
 
-.child2 > img{
-    width: 100%; 
+.child2>img {
+    width: 100%;
     margin-bottom: 10px;
 }
 
-.img-row{
+.img-row {
     display: flex;
 }
+
 .img-row img {
-    width: calc(33.33% - 10px); /* Sve slike unutar reda zauzimaju trećinu širine sa malim razmakom između */
+    width: calc(33.33% - 10px);
     margin-right: 10px;
 }
+
 .image-row img:last-child {
     margin-right: 0;
 }
 
-.child1 > span{
+.child1>span {
     font-weight: 300;
     font-size: 16px;
     line-height: 24px;
 }
-.child1-buttons{
+
+.child1-buttons {
     display: flex;
     width: 100%;
 }
-.child1-buttons button{
+
+.child1-buttons button {
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
     border-radius: 25px;
@@ -225,23 +236,32 @@ header {
     font-size: 16px;
     background-color: #B50014;
     margin: 13% 2%;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.child1 > div > h2{
+.child1-buttons button:hover {
+    background-color: #FFFFFF;
+    color: #B50014;
+}
+
+.child1>div>h2 {
     font-size: 32px;
 }
-.child1 > div > h3{
+
+.child1>div>h3 {
     font-size: 22px;
 }
 
-.section2{
+.section2 {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #B50014;
     color: #FFFFFF;
 }
-.section2-child1{
+
+.section2-child1 {
     flex: 1;
     box-sizing: border-box;
     display: flex;
@@ -249,20 +269,21 @@ header {
     align-items: center;
 }
 
-.section2-child1 div > ul{
-    padding:7%;
-    margin:0;
+.section2-child1 div>ul {
+    padding: 7%;
+    margin: 0;
 }
-.section2-child1 div > ul li {
+
+.section2-child1 div>ul li {
     margin-bottom: 10px;
     font-weight: 300;
     font-size: 16px;
     line-height: 24px;
 }
 
-.section2-child1 > div{
+.section2-child1>div {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
     padding-right: 10%;
@@ -271,7 +292,7 @@ header {
     margin-left: 17%;
 }
 
-#Grillkurs{
+#Grillkurs {
     color: #252525;
     border: 2px solid #B50014;
     border-radius: 25px;
@@ -279,25 +300,35 @@ header {
     font-size: 16px;
     background-color: #FFFFFF;
     margin: 13% 2%;
-    width:174px;
+    width: 174px;
     height: 47px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
-.section2-child1 div > h2{
+
+#Grillkurs:hover {
+    background-color: #252525;
+    color: #FFFFFF;
+}
+
+.section2-child1 div>h2 {
     font-weight: 700;
     font-size: 32px;
 }
 
-.section2-child2{
-    flex: 1; /* Drugi div zauzima sav dostupan prostor */
+.section2-child2 {
+    flex: 1;
     position: relative;
 }
-.section2-child2 img{
-    width: 100%; /* Slika zauzima punu širinu roditeljskog diva */
-    height: auto; /* Automatska visina u odnosu na širinu */
-    display: block; /* Uklanja dodatni prostor ispod slike */
-    object-fit: cover; 
+
+.section2-child2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
-.section3{
+
+.section3 {
     background-color: #252525;
     display: flex;
     flex-direction: column;
@@ -312,14 +343,14 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Centriranje teksta unutar diva */
+    text-align: center;
     color: #FFFFFF;
-    padding: 50px 20px; /* Dodavanje unutrašnjeg prostora za bolji izgled */
+    padding: 50px 20px;
     font-family: "Roboto", sans-serif;
 }
 
 .section3 span {
-    margin-bottom: 20px; /* Razmak ispod teksta */
+    margin-bottom: 20px;
     width: 50%;
 }
 
@@ -333,7 +364,7 @@ header {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     margin-top: 25px;
-    margin-bottom: 60px; /* Razmak ispod dugmeta */
+    margin-bottom: 60px;
     width: 174px;
     height: 47px;
 }
@@ -343,15 +374,116 @@ header {
     color: red;
 }
 
-.section3 > div {
+.section3>div {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Razmak iznad reda slika */
+    margin-top: 20px;
 }
 
-.section3 > div img {
-    width: 262px; /* Prilagodite veličinu slika prema potrebi */
+.section3>div img {
+    width: 262px;
     height: 243px;
-    margin: 0 10px; /* Razmak između slika */
+    margin: 0 10px;
+}
+
+.section4 {
+    display: flex;
+    width: 100%;
+    height: 705;
+}
+
+.img-div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #B50014;
+    font-family: "Roboto", sans-serif;
+    color: #FFFFFF;
+}
+
+.text-div h1,
+.text-div h2,
+.text-div span {
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 15%;
+    width: 50%;
+
+}
+
+.text-div h1,
+h2 {
+    font-weight: 700;
+}
+
+.text-div span {
+    font-weight: 300;
+}
+
+.section5 {
+    background-image: url("../../images/80457d7e9d392ee84954d90d13d15d69@2x\ 1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.section5::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: -1;
+}
+
+.section5 h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.section5 button {
+    background-color: #FFFFFF;
+    color: black;
+    border: 1px solid #B50014;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+    width: 174px;
+    height: 47px;
+}
+
+.section5 button:hover {
+    background-color: #B50014;
+    color: #FFFFFF;
 }

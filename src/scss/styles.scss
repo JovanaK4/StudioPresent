@@ -55,7 +55,6 @@ header {
     }
 }
 
-
 .navbarlinks li:last-child a {
     @include flex-center;
     padding-right: 10px;
@@ -126,12 +125,10 @@ header {
     height: 348px;
     @include flexbox(column, center, center);
     background-color: rgba(0, 0, 0, 0.5);
-    /* Poluprozirna pozadina */
     color: $text-color;
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
-    /* Uključivanje paddinga u širinu i visinu */
 }
 
 .overlay>div {
@@ -150,11 +147,9 @@ header {
 #section1 {
     @include flexbox(row, center, center);
     width: 100%;
-    /* Adjust as needed */
     height: 700px;
     background-color: #252525;
     margin-top: -10px;
-    /* Adjust negative margin to remove gap */
 }
 
 #omotac1 {
@@ -196,7 +191,6 @@ header {
 
 .img-row img {
     width: calc(33.33% - 10px);
-    /* Sve slike unutar reda zauzimaju trećinu širine sa malim razmakom između */
     margin-right: 10px;
 }
 
@@ -274,17 +268,13 @@ header {
 
 .section2-child2 {
     flex: 1;
-    /* Drugi div zauzima sav dostupan prostor */
     position: relative;
 }
 
 .section2-child2 img {
     width: 100%;
-    /* Slika zauzima punu širinu roditeljskog diva */
     height: auto;
-    /* Automatska visina u odnosu na širinu */
     display: block;
-    /* Uklanja dodatni prostor ispod slike */
     object-fit: cover;
 }
 
@@ -320,11 +310,6 @@ header {
     @include button-style(#B50014, #FFFFFF, 3% 10%, 25px, #B50014);
 }
 
-.section3 button:hover {
-    background-color: $text-color;
-    color: red;
-}
-
 .section3>div {
     @include flexbox(row, center, center);
     margin-top: 20px;
@@ -333,8 +318,88 @@ header {
 
 .section3>div img {
     width: 262px;
-    /* Prilagodite veličinu slika prema potrebi */
     height: 243px;
     margin: 0 10px;
     /* Razmak između slika */
 }
+
+.section4 {
+    display: flex;
+    width: 100%;
+    height: 705;
+}
+
+.img-div {
+    flex: 1;
+    @include flexbox(column, center, center);
+    overflow: hidden;
+}
+
+.img-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-div {
+    flex: 1;
+    @include flexbox(column, flex-start, center);
+    padding: 20px;
+    background-color: #B50014;
+    font-family: "Roboto", sans-serif;
+    color: #FFFFFF;
+}
+
+.text-div h1,
+.text-div h2,
+.text-div span {
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 15%;
+    width: 50%;
+}
+
+.text-div h1,
+h2 {
+    font-weight: 700;
+}
+
+.text-div span {
+    font-weight: 300;
+}
+
+.section5 {
+    background-image: url("../../images/80457d7e9d392ee84954d90d13d15d69@2x\ 1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 540px;
+    @include flexbox(row, flex-start, center);
+    font-family: "Roboto", sans-serif;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.section5::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: -1;
+}
+
+.section5 h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.section5 button {
+    margin-top: 20px;
+    width: 174px;
+    height: 47px;
+    @include button-style(#FFFFFF, #000000F0, 3% 10%, 25px, #B50014);
+}
+
