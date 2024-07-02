@@ -17,7 +17,7 @@ header {
 
 .nav {
     background-color: #B50014;
-    width: 1920px;
+    width: 1900px;
     height: 93px;
     margin: 0;
     display: flex;
@@ -82,7 +82,7 @@ header {
 }
 
 #crnaLinija {
-    width: 1920px;
+    width: 1900px;
     height: 30px;
     background-color: #252525;
     display: flex;
@@ -127,7 +127,7 @@ header {
 
 .overlay {
     position: absolute;
-    top: 287px;
+    top: 220px;
     left: 0;
     width: 629px;
     height: 348px;
@@ -232,4 +232,126 @@ header {
 }
 .child1 > div > h3{
     font-size: 22px;
+}
+
+.section2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #B50014;
+    color: #FFFFFF;
+}
+.section2-child1{
+    flex: 1;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section2-child1 div > ul{
+    padding:7%;
+    margin:0;
+}
+.section2-child1 div > ul li {
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.section2-child1 > div{
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-right: 10%;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    margin-left: 17%;
+}
+
+#Grillkurs{
+    color: #252525;
+    border: 2px solid #B50014;
+    border-radius: 25px;
+    padding: 3% 10%;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    margin: 13% 2%;
+    width:174px;
+    height: 47px;
+}
+.section2-child1 div > h2{
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.section2-child2{
+    flex: 1; /* Drugi div zauzima sav dostupan prostor */
+    position: relative;
+}
+.section2-child2 img{
+    width: 100%; /* Slika zauzima punu širinu roditeljskog diva */
+    height: auto; /* Automatska visina u odnosu na širinu */
+    display: block; /* Uklanja dodatni prostor ispod slike */
+    object-fit: cover; 
+}
+.section3{
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.section3 {
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centriranje teksta unutar diva */
+    color: #FFFFFF;
+    padding: 50px 20px; /* Dodavanje unutrašnjeg prostora za bolji izgled */
+    font-family: "Roboto", sans-serif;
+}
+
+.section3 span {
+    margin-bottom: 20px; /* Razmak ispod teksta */
+    width: 50%;
+}
+
+.section3 button {
+    background-color: #B50014;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 25px;
+    margin-bottom: 60px; /* Razmak ispod dugmeta */
+    width: 174px;
+    height: 47px;
+}
+
+.section3 button:hover {
+    background-color: white;
+    color: red;
+}
+
+.section3 > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Razmak iznad reda slika */
+}
+
+.section3 > div img {
+    width: 262px; /* Prilagodite veličinu slika prema potrebi */
+    height: 243px;
+    margin: 0 10px; /* Razmak između slika */
 }

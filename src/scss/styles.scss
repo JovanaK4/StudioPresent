@@ -1,20 +1,6 @@
 @import './variables';
-
-// _mixins.scss
-@mixin flexbox($justify: center, $align: center) {
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
-}
-
-// styles.scss
-@import 'variables';
-@import 'mixins';
-
-// functions.scss
-@function weight($weight-name) {
-    @return map-get($font-weights, $weight-name);
-}
+@import './mixins';
+@import './functions';
 
 body {
     margin: 0;
@@ -40,19 +26,35 @@ header {
     width: 1920px;
     height: 93px;
     margin: 0;
-    @include flex-center(center, center);
+    @include flexbox(row, center, center);
+
+    .navbarlinks {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        @include flexbox(row, center, flex-end);
+        margin-left: auto;
+        left: 518px;
+        position: absolute;
+
+        li {
+            margin-left: 10px;
+
+            a {
+                display: block;
+                color: $text-color;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+                font-family: "Roboto", sans-serif;
+                font-weight: weight(bold);
+                font-size: 16px;
+                line-height: 18.75px;
+            }
+        }
+    }
 }
 
-.navbarlinks {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    @include flex-center;
-    justify-content: flex-end;
-    margin-left: auto;
-    left: 518px;
-    position: absolute;
-}
 
 .navbarlinks li:last-child a {
     @include flex-center;
@@ -66,8 +68,7 @@ header {
 }
 
 #pdf {
-    @include flex-center;
-    justify-content: space-between;
+    @include flexbox(row, center, space-between);
     position: absolute;
     width: 90px;
     height: 28px;
@@ -75,29 +76,11 @@ header {
     left: 1532px;
 }
 
-.navbarlinks li {
-    margin-left: 10px;
-}
-
-.navbarlinks li a {
-    display: block;
-    color: $text-color;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-family: "Roboto", sans-serif;
-    font-weight: weight(bold);
-    font-size: 16px;
-    line-height: 18.75px;
-}
-
 #crnaLinija {
     width: 1920px;
     height: 30px;
     background-color: #252525;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    @include flexbox(row, center, flex-end);
     color: $text-color;
     font-family: "Roboto", sans-serif;
     font-weight: weight(regular);
@@ -141,9 +124,7 @@ header {
     left: 0;
     width: 629px;
     height: 348px;
-    @include flex-center;
-    flex-direction: column;
-    justify-content: center;
+    @include flexbox(column, center, center);
     background-color: rgba(0, 0, 0, 0.5);
     /* Poluprozirna pozadina */
     color: $text-color;
@@ -151,6 +132,209 @@ header {
     padding: 20px;
     box-sizing: border-box;
     /* Uključivanje paddinga u širinu i visinu */
-
 }
 
+.overlay>div {
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overlay>div>h1 p {
+    position: absolute;
+    align-self: flex-end;
+}
+
+#section1 {
+    @include flexbox(row, center, center);
+    width: 100%;
+    /* Adjust as needed */
+    height: 700px;
+    background-color: #252525;
+    margin-top: -10px;
+    /* Adjust negative margin to remove gap */
+}
+
+#omotac1 {
+    width: 60%;
+    height: 70%;
+    display: flex;
+}
+
+.Omotac1-children {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.child1 {
+    display: flex;
+    @include flexbox(column, flex-start, space-between);
+    padding-right: 10%;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    color: #FFFFFF;
+}
+
+.child2 {
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.child2>img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.img-row {
+    display: flex;
+}
+
+.img-row img {
+    width: calc(33.33% - 10px);
+    /* Sve slike unutar reda zauzimaju trećinu širine sa malim razmakom između */
+    margin-right: 10px;
+}
+
+.image-row img:last-child {
+    margin-right: 0;
+}
+
+.child1>span {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.child1-buttons {
+    display: flex;
+    width: 100%;
+}
+
+.child1-buttons button {
+    margin: 13% 2%;
+    @include button-style(#B50014, #ffffff, 3% 10%, 25px, #FFFFFF);
+}
+
+.child1>div>h2 {
+    font-size: 32px;
+}
+
+.child1>div>h3 {
+    font-size: 22px;
+}
+
+.section2 {
+    @include flexbox(row, center, center);
+    background-color: #B50014;
+    color: #FFFFFF;
+}
+
+.section2-child1 {
+    flex: 1;
+    @include flexbox(column, center, center);
+    box-sizing: border-box;
+}
+
+.section2-child1 div>ul {
+    padding: 7%;
+    margin: 0;
+}
+
+.section2-child1 div>ul li {
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.section2-child1>div {
+    @include flexbox(column, flex-start, space-between);
+    padding-right: 10%;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    margin-left: 17%;
+}
+
+#Grillkurs {
+    margin: 13% 2%;
+    width: 174px;
+    height: 47px;
+    @include button-style(#FFFFFF, #252525, 3% 10%, 25px, #B50014);
+}
+
+.section2-child1 div>h2 {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.section2-child2 {
+    flex: 1;
+    /* Drugi div zauzima sav dostupan prostor */
+    position: relative;
+}
+
+.section2-child2 img {
+    width: 100%;
+    /* Slika zauzima punu širinu roditeljskog diva */
+    height: auto;
+    /* Automatska visina u odnosu na širinu */
+    display: block;
+    /* Uklanja dodatni prostor ispod slike */
+    object-fit: cover;
+}
+
+.section3 {
+    background-color: #252525;
+    @include flexbox(column, center, center);
+    color: $text-color;
+}
+
+.section3 {
+    background-color: #252525;
+    @include flexbox(column, center, center);
+    text-align: center;
+    /* Centriranje teksta unutar diva */
+    color: $text-color;
+    padding: 50px 20px;
+    /* Dodavanje unutrašnjeg prostora za bolji izgled */
+    font-family: "Roboto", sans-serif;
+}
+
+.section3 span {
+    margin-bottom: 20px;
+    /* Razmak ispod teksta */
+    width: 50%;
+}
+
+.section3 button {
+    margin-top: 25px;
+    margin-bottom: 60px;
+    /* Razmak ispod dugmeta */
+    width: 174px;
+    height: 47px;
+    @include button-style(#B50014, #FFFFFF, 3% 10%, 25px, #B50014);
+}
+
+.section3 button:hover {
+    background-color: $text-color;
+    color: red;
+}
+
+.section3>div {
+    @include flexbox(row, center, center);
+    margin-top: 20px;
+    /* Razmak iznad reda slika */
+}
+
+.section3>div img {
+    width: 262px;
+    /* Prilagodite veličinu slika prema potrebi */
+    height: 243px;
+    margin: 0 10px;
+    /* Razmak između slika */
+}

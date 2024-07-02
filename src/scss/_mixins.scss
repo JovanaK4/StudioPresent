@@ -1,0 +1,16 @@
+@mixin button-style($bg-color: #B50014, $text-color: #ffffff, $padding: 3% 10%, $border-radius: 25px, $border-color: #B50014) {
+    padding: $padding;
+    border-radius: $border-radius;
+    background-color: $bg-color;
+    color: $text-color;
+    font-family: "Roboto", sans-serif; 
+    font-size: 16px; 
+    text-align: center;
+    border: 1px solid $border-color; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: darken($bg-color, 10%); 
+    }
+  }
