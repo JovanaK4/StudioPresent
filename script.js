@@ -1,13 +1,10 @@
-let slideIndex = 0;
-showSlides();
+const hamMenu = document.querySelector('.menu-button');
+const offScreenMenu = document.querySelector('.off-screen-menu');
+const download = document.getElementById('poslednjiLi');
+const crnaLinija = document.querySelector(".crnaLinija");
+hamMenu.addEventListener('click', () =>{
+    hamMenu.classList.toggle('active');
+    offScreenMenu.classList.toggle('active');
+    poslednjiLi.classList.toggle("hidden");
+})
 
-function showSlides() {
-    let slides = document.getElementsByClassName("slide");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    slides[slideIndex - 1].style.display = "block";  
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}

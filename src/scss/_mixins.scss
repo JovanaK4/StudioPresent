@@ -14,3 +14,26 @@
       background-color: darken($bg-color, 10%); 
     }
   }
+
+  @mixin responsive($breakpoint) {
+    @if $breakpoint == extraSmall {
+      @media (max-width: 600px) {
+        @content;
+      }
+    } @else if $breakpoint == small {
+      @media (min-width: 600px) and (max-width: 767px) {
+        @content;
+      }
+    }@else if $breakpoint == medium {
+      @media (min-width: 768px) and (max-width: 992px) {
+        @content;
+      }
+    } 
+    @else if $breakpoint == large {
+      @media (min-width: 993px) {
+        @content;
+      }
+    } @else if $breakpoint == custom {
+      @content; 
+    }
+  }

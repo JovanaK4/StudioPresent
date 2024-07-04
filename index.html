@@ -7,38 +7,59 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='dist/css/style.css'>
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
     </style>
 </head>
-
 <body>
-    <header>
-        <img id="logo" src="./images/logo.svg" alt="logo">
+     <header>
         <nav class="nav">
-            <ul class="navbarlinks">
-                <li><a href="">Die Metzgerei</a></li>
-                <li><a href="">Dry Aged</a></li>
-                <li><a href="">Fleischversand</a></li>
-                <li><a href="">Events/Kurse</a></li>
-                <li><a href="">Partyservice</a></li>
-                <li><a href="">Tagesessen</a></li>
-                <li><a href="">Impressum</a></li>
-                <li><a href="">Kontakt</a></li>
-                <li>
-                    <a href="">
-                        <img src="./images/pdf slika.png" alt="pdf">
-                        download</a>
+            <img id="logo" src="./images/logo.svg" alt="logo">
+            <ul class="navbarlinks" id="navbarlinks">
+                <li><a href="#">Die Metzgerei</a></li>
+                <li><a href="#">Dry Aged</a></li>
+                <li><a href="#">Fleischversand</a></li>
+                <li><a href="#">Events/Kurse</a></li>
+                <li><a href="#">Partyservice</a></li>
+                <li><a href="#">Tagesessen</a></li>
+                <li><a href="#">Impressum</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li id="poslednjiLi">
+                    <a href="#">
+                        <img src="./images/pdf slika.png" alt="pdf"> Download
+                    </a>
                 </li>
             </ul>
+            <div class="off-screen-menu hidden">
+                <div class="header-off-screen"> Menu</div>
+                <ul>
+                    <li><a href="#">Die Metzgerei</a></li>
+                    <li><a href="#">Dry Aged</a></li>
+                    <li><a href="#">Fleischversand</a></li>
+                    <li><a href="#">Events/Kurse</a></li>
+                    <li><a href="#">Partyservice</a></li>
+                    <li><a href="#">Tagesessen</a></li>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li>
+                        <a href="#">
+                            Download <img src="./images/pdf slika.png" alt="pdf" style="padding-inline:5% ;">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-button hidden" id="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
         <div id="crnaLinija">
             <img src="./images/clock.svg" alt="sat">
             <p>Opentime: Di. - Fr.: 07:00-13:00 und 15:00-18:30. Sa.: 07:30 - 12:30</p>
         </div>
+    </header>
         <div class="slideshow-container">
-            <img src="./images/slide 1.jpg" alt="Slide 1">
             <div class="overlay">
                 <div>
                     <h1>Heiko Brath Metzgermeister</h1>
@@ -47,13 +68,14 @@
                 </div>
             </div>
         </div>
-    </header>
-    <div id="section1">
+    <div class="section1">
         <div id="omotac1">
             <div class="Omotac1-children child1">
                 <div>
                     <h2>Dry aged</h2>
+                    <br>
                     <h3>Alte Wutz, Dry Aged</h3>
+                    <br>
                 </div>
                 <span>
                     Halt amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore
@@ -63,7 +85,7 @@
                     deutsch
                     aliquip ex
                     ea commodo consequat. Wiener Schnitzel aute irure dolor in reprehenderit Guten Tag mollit anim
-                    Stuttgart.<br><br>
+                    Stuttgart.<br>
                     id latine indoctum complectitur HugoClub Mate mea meliore denique nominavi id.
                     Ohrwurm expetenda nam an, his ei Reise euismod assentior.
                 </span>
@@ -73,16 +95,16 @@
                 </div>
             </div>
             <div class="Omotac1-children child2">
-
-                <img src="./images/287e4a29fb95622355c7023ec0f765ff@2x 1 - Shortcut.lnk">
+                <img src="./images/section1/287e4a29fb95622355c7023ec0f765ff@2x 1 (1).jpg">
                 <div class="img-row">
-                    <img src="./images/93567ed87a1475783cc3a90355825a87@2x 1 - Shortcut.lnk">
-                    <img src="./images/d368bea5bcb8ed88cfcf994b7a518068@2x 1 - Shortcut.lnk">
-                    <img src="./images/1c78d243bd195e6ff002f8fdbc24e5d0@2x 1 - Shortcut.lnk">
+                    <img src="./images/section1/93567ed87a1475783cc3a90355825a87@2x 1.jpg">
+                    <img src="./images/section1/d368bea5bcb8ed88cfcf994b7a518068@2x 1.jpg">
+                    <img src="./images/section1/1c78d243bd195e6ff002f8fdbc24e5d0@2x 1.jpg">
                 </div>
             </div>
         </div>
     </div>
+   <!--
     <div class="section2">
         <div class="section2-child1">
             <div>
@@ -140,6 +162,60 @@
         <h2>Fleischversand</h2>
         <button>Jetzt bestellen</button>
     </div>
+    <div class="section6">
+        <div class="section6div1">
+            <img src="./images/genussnetz logo 1.png">
+            <div>
+                <h1>Metzgerei Brath ist Mitglied im Genussnetzwerk</h1>
+                <button>Gehen zu site</button>
+            </div>
+        </div>
+        <img src="./images/vonal 1.png">
+        <div class="section6div2">
+            <span>Auszeichnungen</span>
+            <div>
+                <img src="./images/nagrada1.svg"> 
+                <p>Tollit argumentum genau<br>Saepe lobortis</p>
+            </div>
+            <div>
+                <img src="./images/nagrada2.svg"> 
+                <p>Schneewittchen<br>denique</p>
+            </div>
+            <div>
+                <img src="./images/nagrada3.svg"> 
+                <p>Grimms Märchen <br> expetenda</p>
+            </div>
+            <div>
+                <img src="./images/nagrada4.svg"> 
+                <p>Mettwurst mei <br>ullum gloriatur.</p>
+            </div>
+        </div>
+        <img src="./images/vonal 1.png">
+        <h5>Empfehlungs</h5>
+        <h1>Was die Leute über uns sagen</h1>
+        <div class="swiper">
+            <div class="cards card1">
+                <p>Sprechen Sie deutsch
+                 aliquip ex ea commodo consequat. Wiener Schnitzel aute irure dolor in 
+                 reprehenderit Guten Tag mollit anim Stuttgart.</p>
+                 <p>Maria Kartofeln</p>
+            </div>
+            <img src="./images/">
+            <div class="cards card2">
+                	<img src="./images/grillkurs_icon.svg">
+                    <img src="./images/zvezdice.svg">
+                    <p>Wiener Schnitzel amet, consectetur Handtasche elit, 
+                    sed do eiusmod tempor Stuttgart ut labore et dolore magna  Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
+                    <p>Halling Tobias <br><br> Koch</p>
+            </div>
+            <div class="cards card3">
+                <p>Achtung fur atine indoctum complectitur
+                 HugoClub Mate mea meliore denique nominavi id. Ohrwurm expetenda nam an, his ei Reise euismod assentior.</p>
+                <p>Rene Weinstein</p>
+            </div>
+        </div>
+        <button></button>
+    </div>-->
     <script src='script.js'></script>
 </body>
 
